@@ -43,6 +43,13 @@ class TestTaskPool(unittest.TestCase):
         self.assertTrue(task.completed)
         self.assertEqual(task.status, "Done")
 
+    def test_get_completed_task_count(self):
+        self.pool.populate()
+
+        self.assertEqual(
+            self.pool.get_completed_task_count(), 3
+        )
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

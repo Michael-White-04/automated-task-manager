@@ -36,7 +36,7 @@ jobs:
       - name: Verify Generated HTML
         run: |
           cat index.html
-          grep -F "Ran 4 tests" index.html
+          grep -F "Ran 5 tests" index.html
           grep -F "OK" index.html
 
       - name: Commit and Push HTML Report
