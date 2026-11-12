@@ -45,6 +45,9 @@ class TaskPool:
             if task.status == "Done"
         ]
 
+    def get_completed_task_count(self):
+        return len(self.get_done_tasks())
+
 
 def main():
     pool = TaskPool()
